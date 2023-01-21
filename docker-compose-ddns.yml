@@ -5,11 +5,11 @@ services:
     image: oznu/cloudflare-ddns:latest
     restart: always
     environment:
-      - API_KEY: $API_KEY 
-      - ZONE: $ZONE
-      - PROXIED=true
-      - PUID=1000
-      - PGID=1000
+      API_KEY: $API_KEY 
+      ZONE: $ZONE
+      PROXIED=true
+      PUID=1000
+      PGID=1000
 
 networks:
   default:
