@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:  
+  cloudflare-ddns:
+    image: oznu/cloudflare-ddns:latest
+    restart: always
+    environment:
+      - API_KEY__FILE: 
+      - ZONE__FILE: 
+      - PROXIED=true
+      - PUID=1000
+      - PGID=1000
+
