@@ -1,0 +1,25 @@
+version: "3.1"
+
+services:
+  pihole:
+    image: pihole/pihole:latest
+    container_name: pihole
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 67:67/udp
+      - 8080:80/tcp
+    environment:
+      TZ: 'America/Indianapolis'
+      WEBPASSWORD: $PIHOLE_PWD
+    volumes:
+      - /etc-pihole/:/etc/pihole/
+      - /etc-dnsmasq.d/:/etc/dnsmasq.d/
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+
+networks:
+  default:
+    name: my-main-net
+    external: true
