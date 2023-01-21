@@ -37,6 +37,10 @@ services:
       - BASE_URL=http://localhost:8081
     restart: always
 
+volumes:
+  mealie-data:
+    driver: local
+
 networks:
   default:
     name: my-main-net
