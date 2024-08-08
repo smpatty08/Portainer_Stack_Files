@@ -29,6 +29,8 @@ services:
       SMTP_FROM_EMAIL: $email
       SMTP_USER: $user
       SMTP_PASSWORD: $password
+      SECURITY_MAX_LOGIN_ATTEMPTS: 5
+      SECURITY_USER_LOCKOUT_TIME: 24
 
 volumes:
   mealie-data:
