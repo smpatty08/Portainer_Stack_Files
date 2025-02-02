@@ -2,7 +2,7 @@ version: "3.1"
 
 services:
   mealie:
-    image: ghcr.io/mealie-recipes/mealie:v1.11.0 # 
+    image: ghcr.io/mealie-recipes/mealie:v2.5.0 # 
     container_name: mealie
     restart: always
     ports:
