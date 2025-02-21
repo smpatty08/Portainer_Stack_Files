@@ -19,3 +19,8 @@ services:
       - 8181:8181
       - 8081:8081
     restart: unless-stopped
+
+networks:
+  default:
+    name: my-main-net
+    external: true
