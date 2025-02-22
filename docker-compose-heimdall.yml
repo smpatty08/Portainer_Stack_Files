@@ -10,8 +10,8 @@ services:
     volumes:
       - ./config:/config
     ports:
-      - 80:80
-      - 443:443
+      - 8180:80
+      - 8443:443
     restart: unless-stopped
 
 networks:
