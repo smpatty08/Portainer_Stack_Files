@@ -14,3 +14,7 @@ services:
       - 443:443
     restart: unless-stopped
 
+networks:
+  default:
+    name: my-main-net
+    external: true
